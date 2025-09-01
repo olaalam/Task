@@ -8,16 +8,17 @@ import {
   Plus
 } from "lucide-react";
 
+type LucideIconComponent = React.FC<{ size?: number; className?: string }>;
+
 interface SidebarItem {
-  // Use a union type to allow either a Font Awesome IconDefinition or a React component
-  icon: IconDefinition | React.ComponentType<any>;
+  icon: IconDefinition | LucideIconComponent;
   label: string;
   badge?: string;
 }
 
 interface SidebarProps {
   apps: { name: string; active?: boolean }[];
-  sidebarItems: SidebarItem[]; // Use the new SidebarItem interface
+  sidebarItems: SidebarItem[]; 
   setActiveTab: (tab: string) => void;
 }
 
@@ -38,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ apps, sidebarItems, setActiveTab }) =
               <FontAwesomeIcon icon={item.icon as IconDefinition} size="lg" className="text-gray-400" />
             ) : (
               // If it's a Lucide icon (a React component)
-              // You can safely render it as a component
+              // You can safely render it as a component using our custom type
               <item.icon size={16} className="text-gray-400" />
             )}
             <span className="text-sm text-gray-300 flex-1">{item.label}</span>

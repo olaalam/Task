@@ -56,8 +56,7 @@ const ScoutTestimonialSection = () => {
         <div className=" sm:max-w-xl md:max-w-4xl mx-auto text-center">
           {/* Main Quote */}
           <blockquote className="text-lg  lg:text-2xl font-normal leading-tight my-8 md:my-12">
-            <span className="text-white">
-              "Scout is an indispensable tool for our Engineering, DS and Sales teams to engage with our customers. We rely on Scout daily, making it an integral part of our operations."
+            <span className="text-white">"Scout is an indispensable tool for our Engineering, DS and Sales teams to engage with our customers. We rely on Scout daily, making it an integral part of our operations."
             </span>
           </blockquote>
 
