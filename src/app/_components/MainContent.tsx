@@ -3,7 +3,7 @@ import React from "react";
 import { BarChart3, Play, Square, Plus, ChevronRight } from "lucide-react";
 
 interface Action {
-  icon: any;
+  icon: React.ElementType;
   title: string;
   type: string;
   variable: string;

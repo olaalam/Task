@@ -1,15 +1,23 @@
 // src/app/_components/Sidebar.tsx
 "use client";
 import React from "react";
-// Import the Font Awesome component
+// Import the Font Awesome component and the necessary type
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { 
-  Home, Inbox, BarChart3, Layers, Puzzle, FileText, Settings, Plus 
+  Plus
 } from "lucide-react";
+
+interface SidebarItem {
+  // Use a union type to allow either a Font Awesome IconDefinition or a React component
+  icon: IconDefinition | React.ComponentType<any>;
+  label: string;
+  badge?: string;
+}
 
 interface SidebarProps {
   apps: { name: string; active?: boolean }[];
-  sidebarItems: { icon: any; label: string; badge?: string }[];
+  sidebarItems: SidebarItem[]; // Use the new SidebarItem interface
   setActiveTab: (tab: string) => void;
 }
 
@@ -24,11 +32,13 @@ const Sidebar: React.FC<SidebarProps> = ({ apps, sidebarItems, setActiveTab }) =
             className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800 cursor-pointer transition-colors"
           >
             {/* Conditional rendering based on icon type */}
-            {item.icon.prefix ? (
+            {/* The type guard 'prefix' works correctly because IconDefinition has a 'prefix' property */}
+            {'prefix' in item.icon ? (
               // If it's a Font Awesome icon (has a 'prefix' property)
-              <FontAwesomeIcon icon={item.icon} size="lg" className="text-gray-400" />
+              <FontAwesomeIcon icon={item.icon as IconDefinition} size="lg" className="text-gray-400" />
             ) : (
               // If it's a Lucide icon (a React component)
+              // You can safely render it as a component
               <item.icon size={16} className="text-gray-400" />
             )}
             <span className="text-sm text-gray-300 flex-1">{item.label}</span>
