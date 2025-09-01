@@ -25,7 +25,7 @@ const ScoutAISection = () => {
   return (
     <div className="min-h-screen bg-black text-white p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid sm:grid-cols-6 md:grid-cols-12 gap-6">
           
           {/* Left Column - AI where you work */}
           <div className="col-span-4 space-y-6">
@@ -186,7 +186,7 @@ const ScoutAISection = () => {
         </div>
 
         {/* Bottom Section - Three Feature Cards */}
-        <div className="grid grid-cols-12 gap-6 mt-6">
+        <div className="grid sm:grid-cols-6 md:grid-cols-12 gap-6 mt-6">
           <div className="col-span-4">
             <Card className="bg-black border-gray-700 h-full">
               <CardContent className="p-8">

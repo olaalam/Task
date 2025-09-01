@@ -18,7 +18,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+      <div className="hidden md:flex space-x-8 text-sm font-medium  text-gray-300">
         <Link href="/features" className="hover:text-white">
           Features
         </Link>
@@ -47,8 +47,8 @@ export default function Navbar() {
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-black text-white w-64">
-            <div className="flex flex-col space-y-6 mt-8 text-lg">
+          <SheetContent side="right" className="bg-black text-white w-64 border-none">
+            <div className="flex flex-col justify-center items-center  space-y-6 mt-8 text-lg">
               <Link href="#features" className="hover:text-gray-300">
                 Features
               </Link>

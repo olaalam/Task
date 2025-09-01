@@ -11,7 +11,7 @@ import ScoutDedicatedSupportSection from "./_components/ScoutDedicatedSupportSec
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black via-[#313839] to-[#493F49] text-white">
+    <div className="min-h-screen  bg-gradient-to-r from-black via-[#313839] to-[#493F49] text-white">
       {/* Fixed Navbar */}
       <Navbar />
       

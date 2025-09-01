@@ -1,5 +1,8 @@
+// src/app/_components/Sidebar.tsx
 "use client";
 import React from "react";
+// Import the Font Awesome component
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   Home, Inbox, BarChart3, Layers, Puzzle, FileText, Settings, Plus 
 } from "lucide-react";
@@ -12,7 +15,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ apps, sidebarItems, setActiveTab }) => {
   return (
-    <div className="w-64 bg-[#0f0f0f] border-r border-gray-800 flex flex-col">
+    <div className="sm:w-full md:w-64 bg-[#0f0f0f] border-r border-gray-800 flex flex-col">
       {/* Main Navigation */}
       <div className="p-4 space-y-2">
         {sidebarItems.map((item, index) => (
@@ -20,7 +23,14 @@ const Sidebar: React.FC<SidebarProps> = ({ apps, sidebarItems, setActiveTab }) =
             key={index}
             className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800 cursor-pointer transition-colors"
           >
-            <item.icon size={16} className="text-gray-400" />
+            {/* Conditional rendering based on icon type */}
+            {item.icon.prefix ? (
+              // If it's a Font Awesome icon (has a 'prefix' property)
+              <FontAwesomeIcon icon={item.icon} size="lg" className="text-gray-400" />
+            ) : (
+              // If it's a Lucide icon (a React component)
+              <item.icon size={16} className="text-gray-400" />
+            )}
             <span className="text-sm text-gray-300 flex-1">{item.label}</span>
             {item.badge && (
               <span className="bg-blue-600 text-xs px-2 py-1 rounded text-white">
@@ -51,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ apps, sidebarItems, setActiveTab }) =
             </div>
           ))}
         </div>
-      </div>
+      </div> 
     </div>
   );
 };
