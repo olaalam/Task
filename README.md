@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Scout – Custom AI Agents & Workflows Platform
 
-## Getting Started
+A powerful platform that enables teams to build **custom AI agents and workflows** in record time.
 
-First, run the development server:
+## Demo / Preview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Visit the live demo: [https://task-teal-eight.vercel.app](https://task-teal-eight.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The home page includes navigation to Features, Pricing, Docs, Blog, and an interactive UI for configuring AI workflows.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Build AI agents with modular **Inputs**, **Actions**, and **Configuration** panels.
+- Use powerful LLM like **GPT‑4 Turbo** with adjustable parameters (temperature, max tokens, response type).
+- Workflow automation with branching conditions and customizable responses.
+- Seamless integration with tools like Slack, Discord, Statsig, and Deno.
+- Interactive UI built with **ShadCN UI components** and responsive layout.
+- Multiple pricing tiers: Hobby (free), Pro (paid), and Enterprise with flexible scaling.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js** – React framework for frontend and server capabilities.
+- **TypeScript / TSX** – Strongly typed React components.
+- **TailwindCSS** – Utility-first CSS framework for styling.
+- **ShadCN UI** – Component library for reusable UI elements.
+- **Vercel** – Deployment platform providing automatic CI/CD and global CDN.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation & Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   cd <project-folder>
